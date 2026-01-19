@@ -4,348 +4,872 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIPUA CONSULTING | Erfolgreich in Afrika</title>
     <meta name="description"
-        content="Sipua Consulting - Ihr Partner für Geschäfte in Afrika. Marktanalysen, Strategie und Umsetzung.">
-    <!-- Fonts -->
+        content="SIPUA CONSULTING - Unternehmensberatung für erfolgreichen Markteintritt in Afrika. Professionelle Geschäftsentwicklung, Strategieberatung und Netzwerkaufbau.">
+    <meta name="keywords"
+        content="Afrika, Unternehmensberatung, Business Development, Markteintritt, Investitionen, Erneuerbare Energien, Solarenergie, PPP-Projekte">
+    <meta name="author" content="Alexander SIPUA Ngnoubamdjum">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="SIPUA CONSULTING - Erfolgreich in Afrika">
+    <meta property="og:description"
+        content="Professionelle Unternehmensberatung für den afrikanischen Markt. Geschäftsentwicklung, Markteintritt und strategische Beratung.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sipua-consulting.com">
+
+    <title>SIPUA CONSULTING | Unternehmensberatung Afrika - Geschäftsentwicklung & Markteintritt</title>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
 </head>
 
 <body>
-
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
             <a href="#home" class="nav__logo">
                 <img src="images/logo.png" alt="SIPUA CONSULTING Logo">
             </a>
 
-            <ul class="nav__list" id="nav-list">
-                <li><a href="#home" class="nav__link active" data-t="nav_home">Startseite</a></li>
-                <li><a href="#services" class="nav__link" data-t="nav_services">Leistungen</a></li>
-                <li><a href="#expertise" class="nav__link" data-t="nav_expertise">Expertise</a></li>
-                <li><a href="#trust" class="nav__link" data-t="nav_trust">Vertrauen</a></li>
-            </ul>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active" data-t="nav_home">Startseite</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link" data-t="nav_about">Über uns</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link" data-t="nav_services">Leistungen</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#expertise" class="nav__link" data-t="nav_expertise">Expertise Afrika</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#references" class="nav__link" data-t="nav_references">Referenzen</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link nav__cta" data-t="nav_contact">Kontakt</a>
+                    </li>
+                    <li class="nav__item lang-switcher">
+                        <button class="lang-btn active" onclick="setLanguage('de')" title="Deutsch">🇩🇪</button>
+                        <button class="lang-btn" onclick="setLanguage('fr')" title="Français">🇫🇷</button>
+                        <button class="lang-btn" onclick="setLanguage('en')" title="English">🇬🇧</button>
+                    </li>
+                </ul>
 
-            <div style="display: flex; align-items: center;">
-                <a href="#contact" class="btn btn-primary nav__cta" data-t="nav_contact">Kontakt</a>
-
-                <div class="lang-switcher">
-                    <button class="lang-btn active" onclick="setLanguage('de')" title="Deutsch">DE</button>
-                    <button class="lang-btn" onclick="setLanguage('fr')" title="Français">FR</button>
-                    <button class="lang-btn" onclick="setLanguage('en')" title="English">EN</button>
-                </div>
+                <button class="nav__close" id="nav-close" aria-label="Menü schließen">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
             </div>
+
+            <button class="nav__toggle" id="nav-toggle" aria-label="Menü öffnen">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero__bg">
-            <img src="images/hero-background.png" alt="Business Skyline Africa">
-        </div>
-        <div class="hero__overlay"></div>
-
-        <div class="hero__content">
-            <h1 class="hero__title" data-t="hero_title">ERFOLGREICH IN AFRIKA.</h1>
-            <h2 class="hero__subtitle" data-t="hero_subtitle">Ihr Partner für Geschäfte in Afrika</h2>
-
-            <div class="hero__buttons">
-                <a href="#contact" class="btn btn-primary" data-t="btn_consult">Beratung anfragen</a>
-                <a href="#services" class="btn btn-outline" data-t="btn_discover">Leistungen entdecken</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <!-- Centered Header Block -->
-            <div class="section-header-block">
-                <span class="section-label-big" data-t="about_label">Über Sipua Consulting</span>
-                <span class="section-subtitle-small" data-t="about_head">Brückenbauer. Experte. Partner.</span>
-            </div>
-
-            <div class="about__content">
-                <div class="about__image">
-                    <img src="images/alexander-sipua.png" alt="Alexander Sipua Ngnoubamdjum">
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero__overlay"></div>
+            <div class="hero__pattern"></div>
+            <div class="hero__content container">
+                <div class="hero__badge">
+                    <span class="badge-icon">🌍</span>
+                    <span>Ihr Partner für Afrika-Geschäft</span>
                 </div>
-                <div class="about__text">
-                    <p data-t="about_text_1">
-                        Profitieren Sie von langjährigen Erfahrungen, fundierten Marktkenntnissen und belastbaren
-                        Netzwerken in Afrika. SIPUA CONSULTING begleitet Unternehmen, Institutionen und Investoren
-                        erfolgreich beim Markteintritt und bei der Umsetzung tragfähiger Geschäftsmodelle.
-                    </p>
-                    <div class="about__quote">
-                        <p data-t="about_quote">"Erfolgreiche Geschäfte in Afrika erfordern mehr als Kapital – sie
-                            brauchen Verständnis, Vertrauen und die richtigen Verbindungen."</p>
-                        <br>
-                        <small>— Alexander SIPUA Ngnoubamdjum, African Energy Forum, Hamburg 2012</small>
+                <h1 class="hero__title">
+                    <span class="hero__title-main" data-t="hero_title_main">ERFOLGREICH IN AFRIKA.</span>
+                    <span class="hero__title-sub" data-t="hero_title_sub">Neue Geschäftsmodelle in Afrika –
+                        professionelle Konzeption &
+                        Umsetzung mit SIPUA CONSULTING</span>
+                </h1>
+                <p class="hero__description" data-t="hero_desc">
+                    Profitieren Sie von langjährigen Erfahrungen, fundierten Marktkenntnissen und belastbaren Netzwerken
+                    in Afrika. SIPUA CONSULTING begleitet Unternehmen, Institutionen und Investoren erfolgreich beim
+                    Markteintritt und bei der Umsetzung tragfähiger Geschäftsmodelle.
+                </p>
+                <div class="hero__buttons">
+                    <a href="#contact" class="btn btn--primary">
+                        <span data-t="btn_contact">Beratung anfragen</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                    <a href="#services" class="btn btn--secondary">
+                        <span data-t="btn_services">Leistungen entdecken</span>
+                    </a>
+                </div>
+                <div class="hero__stats">
+                    <div class="stat">
+                        <span class="stat__number">25+</span>
+                        <span class="stat__label">Jahre Erfahrung</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">50+</span>
+                        <span class="stat__label">Projekte</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">15+</span>
+                        <span class="stat__label">Länder</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header-block">
-                <span class="section-label-big" data-t="serv_label">Unsere Leistungen</span>
-                <span class="section-subtitle-small" data-t="serv_head">Ganzheitliche Beratung</span>
+            <div class="hero__scroll">
+                <a href="#about" class="scroll-indicator" aria-label="Nach unten scrollen">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M19 12l-7 7-7-7" />
+                    </svg>
+                </a>
             </div>
+        </section>
 
-            <div class="services__grid">
-                <!-- Card 1 -->
-                <div class="service-card">
-                    <div class="service-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6">
-                            </path>
-                        </svg></div>
-                    <h3 class="service-title" data-t="serv_1_t">Business Development</h3>
-                    <p class="service-desc" data-t="serv_1_d">Strategische Geschäftsentwicklung für Firmen und
-                        Investoren mit Fokus auf Afrika.</p>
-                </div>
-                <!-- Card 2 -->
-                <div class="service-card">
-                    <div class="service-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
-                            </path>
-                        </svg></div>
-                    <h3 class="service-title" data-t="serv_2_t">Vernetzung & Entscheider</h3>
-                    <p class="service-desc" data-t="serv_2_d">Direkter Zugang zu Wirtschaftslenkern und
-                        Regierungsstellen auf allen Ebenen.</p>
-                </div>
-                <!-- Card 3 -->
-                <div class="service-card">
-                    <div class="service-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
-                            </path>
-                        </svg></div>
-                    <h3 class="service-title" data-t="serv_3_t">PPP-Projektmanagement</h3>
-                    <p class="service-desc" data-t="serv_3_d">Professionelle Betreuung von Public-Private-Partnerships
-                        von der Konzeption bis zur Umsetzung.</p>
-                </div>
-                <!-- Card 4 -->
-                <div class="service-card">
-                    <div class="service-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0121 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7">
-                            </path>
-                        </svg></div>
-                    <h3 class="service-title" data-t="serv_4_t">Markteintrittsstrategien</h3>
-                    <p class="service-desc" data-t="serv_4_d">Maßgeschneiderte Konzepte für nachhaltige Erfolge im
-                        afrikanischen Wirtschaftsraum.</p>
-                </div>
-                <!-- Card 5 -->
-                <div class="service-card" style="border-color: var(--color-accent);">
-                    <div class="service-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
-                            </path>
-                        </svg></div>
-                    <h3 class="service-title" data-t="serv_5_t">Erneuerbare Energien</h3>
-                    <p class="service-desc" data-t="serv_5_d">Spezialisierung auf Solarenergie, Off-Grid-Anlagen und
-                        nachhaltige Energieprojekte.</p>
-                </div>
-                <!-- Card 6 -->
-                <div class="service-card">
-                    <div class="service-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3">
-                            </path>
-                        </svg></div>
-                    <h3 class="service-title" data-t="serv_6_t">Kommunikation & Moderation</h3>
-                    <p class="service-desc" data-t="serv_6_d">Erfahrener Moderator und Redner für internationale Anlässe
-                        und interkulturelle Vermittlung.</p>
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="about__grid">
+                    <div class="about__image-wrapper">
+                        <div class="about__image-frame">
+                            <img src="images/alexander-sipua.png"
+                                alt="Alexander SIPUA Ngnoubamdjum - Unternehmensberater" class="about__image"
+                                loading="lazy">
+                        </div>
+                        <div class="about__image-accent"></div>
+                        <div class="about__experience-badge">
+                            <span class="experience__number">25+</span>
+                            <span class="experience__text" data-t="about_exp_badge">Jahre Afrika-Expertise</span>
+                        </div>
+                    </div>
+
+                    <div class="about__content">
+                        <span class="section__label" data-t="about_label">Über SIPUA CONSULTING</span>
+                        <h2 class="section__title" data-t="about_title">Ihr Brückenbauer zwischen Europa und Afrika</h2>
+
+                        <p class="about__text" data-t="about_text">
+                            Alexander SIPUA Ngnoubamdjum ist Unternehmensberater mit langjähriger Erfahrung in Afrika.
+                            Er war unter anderem Redner beim <strong>6th German-African Energy Forum in Hamburg</strong>
+                            und berät Unternehmen bei internationalen Projekten mit Schwerpunkt West- und Zentralafrika.
+                        </p>
+
+                        <blockquote class="about__quote">
+                            <svg class="quote-icon" width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                            </svg>
+                            <p data-t="about_quote_text">„Erfolgreiche Geschäfte in Afrika erfordern mehr als Kapital –
+                                sie brauchen Verständnis,
+                                Vertrauen und die richtigen Verbindungen."</p>
+                            <cite data-t="about_quote_cite">— Alexander SIPUA Ngnoubamdjum, Vortrag beim African Energy
+                                Forum, Hamburg 2012</cite>
+                        </blockquote>
+
+                        <div class="about__highlights">
+                            <div class="highlight">
+                                <div class="highlight__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                        <polyline points="22 4 12 14.01 9 11.01" />
+                                    </svg>
+                                </div>
+                                <span>Internationale Expertise</span>
+                            </div>
+                            <div class="highlight">
+                                <div class="highlight__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                        <polyline points="22 4 12 14.01 9 11.01" />
+                                    </svg>
+                                </div>
+                                <span>Belastbare Netzwerke</span>
+                            </div>
+                            <div class="highlight">
+                                <div class="highlight__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                        <polyline points="22 4 12 14.01 9 11.01" />
+                                    </svg>
+                                </div>
+                                <span>Kulturelle Kompetenz</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Expertise Section - Grouped -->
-    <section id="expertise" class="expertise">
-        <div class="container">
-            <div class="section-header-block">
-                <span class="section-label-big" data-t="exp_label">Fundierte Expertise</span>
-                <span class="section-subtitle-small" data-t="exp_title">Struktur für Ihren Erfolg</span>
+        <!-- Services Section -->
+        <section class="services section" id="services">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label" data-t="serv_label">Unsere Leistungen</span>
+                    <h2 class="section__title" data-t="serv_title">Ganzheitliche Beratung für Ihren Afrika-Erfolg</h2>
+                    <p class="section__description" data-t="serv_desc">Von der Strategie bis zur Umsetzung – wir
+                        begleiten Sie auf dem
+                        gesamten Weg</p>
+                </div>
+
+                <div class="services__grid">
+                    <!-- Service 1 -->
+                    <article class="service-card">
+                        <div class="service-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <h3 class="service-card__title" data-t="serv_1_t">Business Development</h3>
+                        <p class="service-card__description" data-t="serv_1_d">Strategische Geschäftsentwicklung für
+                            Firmen, Institutionen
+                            und Investoren mit Fokus auf den afrikanischen Kontinent.</p>
+                        <ul class="service-card__list">
+                            <li>Marktanalyse & Potentialbewertung</li>
+                            <li>Geschäftsmodellentwicklung</li>
+                            <li>Investitionsberatung</li>
+                        </ul>
+                    </article>
+
+                    <!-- Service 2 -->
+                    <article class="service-card service-card--featured">
+                        <div class="service-card__badge" data-t="serv_badge">Kernkompetenz</div>
+                        <div class="service-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="2" y1="12" x2="22" y2="12" />
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            </svg>
+                        </div>
+                        <h3 class="service-card__title" data-t="serv_2_t">Vernetzung & Netzwerk</h3>
+                        <p class="service-card__description" data-t="serv_2_d">Direkter Zugang zu Wirtschaftslenkern und
+                            Entscheidern auf
+                            allen Ebenen – von lokalen Partnern bis zu Regierungsstellen.</p>
+                        <ul class="service-card__list">
+                            <li>Kontaktvermittlung</li>
+                            <li>Stakeholder-Management</li>
+                            <li>Regierungsbeziehungen</li>
+                        </ul>
+                    </article>
+
+                    <!-- Service 3 -->
+                    <article class="service-card">
+                        <div class="service-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                        </div>
+                        <h3 class="service-card__title" data-t="serv_3_t">Betreuung von PPP-Projekten</h3>
+                        <p class="service-card__description" data-t="serv_3_d">Professionelle Betreuung von
+                            Public-Private-Partnership (PPP) Projekten – von der Konzeption bis zur erfolgreichen
+                            Umsetzung.</p>
+                    </article>
+
+                    <!-- Service 4 -->
+                    <article class="service-card">
+                        <div class="service-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                <polyline points="9 22 9 12 15 12 15 22" />
+                            </svg>
+                        </div>
+                        <h3 class="service-card__title" data-t="serv_4_t">Markteintritt</h3>
+                        <p class="service-card__description" data-t="serv_4_d">Maßgeschneiderte Markteintrittsstrategien
+                            für nachhaltige Erfolge im afrikanischen Wirtschaftsraum.</p>
+                    </article>
+
+                    <!-- Service 5 -->
+                    <article class="service-card service-card--featured">
+                        <div class="service-card__badge" data-t="serv_badge_en">Erneuerbare Energien</div>
+                        <div class="service-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 8v8M8 12h8" />
+                            </svg>
+                        </div>
+                        <h3 class="service-card__title" data-t="serv_5_t">Erneuerbare Energien</h3>
+                        <p class="service-card__description" data-t="serv_5_d">Spezialisierung auf nachhaltige
+                            Energieprojekte in Afrika – Solarenergie, Off-Grid-Anlagen und PV-Parks.</p>
+                    </article>
+
+                    <!-- Service 6 -->
+                    <article class="service-card">
+                        <div class="service-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <h3 class="service-card__title" data-t="serv_6_t">Kommunikation & Moderation</h3>
+                        <p class="service-card__description" data-t="serv_6_d">Als erfahrener Kommunikator, Moderator
+                            und Redner auf internationaler Ebene vermittle ich zwischen Kulturen und Interessen.</p>
+                    </article>
+                </div>
             </div>
+        </section>
 
-            <div class="expertise__content">
-                <!-- Links Text / Rechts Bild -->
-                <div class="expertise__list-container">
-                    <div class="expertise__grid-list">
-                        <div class="exp-item">
-                            <h4 data-t="exp_g1">Strategie & Analyse</h4>
-                            <ul>
-                                <li data-t="exp_1_1">Entscheidungsprozesse unterstützen</li>
-                                <li data-t="exp_1_2">Strategische Konzepte entwickeln</li>
-                                <li data-t="exp_1_3">Marktanalysen & Machbarkeit</li>
-                            </ul>
+        <!-- Energy Highlight Section -->
+        <section class="energy-highlight">
+            <div class="container">
+                <div class="energy-highlight__grid">
+                    <div class="energy-highlight__content">
+                        <span class="section__label section__label--light" data-t="en_label">Fokus Erneuerbare
+                            Energien</span>
+                        <h2 class="energy-highlight__title" data-t="en_title">Afrika – der Kontinent der Sonne</h2>
+                        <p class="energy-highlight__text" data-t="en_desc">
+                            Mit über 300 Sonnentagen pro Jahr bietet Afrika enormes Potenzial für Solarenergie. Wir
+                            begleiten Sie bei der Realisierung nachhaltiger Energieprojekte – von der Planung bis zur
+                            Inbetriebnahme.
+                        </p>
+                        <div class="energy-highlight__features">
+                            <div class="energy-feature">
+                                <span class="energy-feature__icon">☀️</span>
+                                <span class="energy-feature__text" data-t="en_f1">Solarenergie-Projekte</span>
+                            </div>
+                            <div class="energy-feature">
+                                <span class="energy-feature__icon">🔋</span>
+                                <span class="energy-feature__text" data-t="en_f2">Off-Grid-Lösungen</span>
+                            </div>
+                            <div class="energy-feature">
+                                <span class="energy-feature__icon">⚡</span>
+                                <span class="energy-feature__text" data-t="en_f3">PV-Parks & Infrastruktur</span>
+                            </div>
                         </div>
-                        <div class="exp-item">
-                            <h4 data-t="exp_g2">Umsetzung & Business</h4>
-                            <ul>
-                                <li data-t="exp_2_1">Geschäftsmodelle & Konzepte</li>
-                                <li data-t="exp_2_2">Umsetzbare Businesspläne</li>
-                                <li data-t="exp_2_3">Wirtschaftliche Rahmenbedingungen</li>
-                            </ul>
+                    </div>
+                    <div class="energy-highlight__image">
+                        <img src="images/solar-energy.png" alt="Solarenergie-Projekt in Afrika" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section class="expertise section" id="expertise">
+            <div class="container">
+                <div class="expertise__grid">
+                    <div class="expertise__content">
+                        <span class="section__label">Expertise Afrika</span>
+                        <h2 class="section__title">Ihr Nutzen – unsere Kompetenz</h2>
+                        <p class="expertise__intro">
+                            Mit tiefgreifendem Verständnis des afrikanischen Marktes und jahrzehntelanger Erfahrung
+                            unterstützen wir Sie bei allen Aspekten Ihrer Afrika-Projekte.
+                        </p>
+
+                        <ul class="expertise__list">
+                            <li class="expertise__item">
+                                <div class="expertise__icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                </div>
+                                <div class="expertise__text">
+                                    <strong>Strategische Entscheidungen</strong>
+                                    <span>Unterstützung von Entscheidungsprozessen bei internationalen Projekten</span>
+                                </div>
+                            </li>
+                            <li class="expertise__item">
+                                <div class="expertise__icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                </div>
+                                <div class="expertise__text">
+                                    <strong>Konzeptentwicklung</strong>
+                                    <span>Entwicklung strategischer Konzepte mit Afrika-Bezug</span>
+                                </div>
+                            </li>
+                            <li class="expertise__item">
+                                <div class="expertise__icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                </div>
+                                <div class="expertise__text">
+                                    <strong>Machbarkeitsprüfung</strong>
+                                    <span>Prüfung von Ideen und Umsetzbarkeit sowie Machbarkeitsstudien</span>
+                                </div>
+                            </li>
+                            <li class="expertise__item">
+                                <div class="expertise__icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                </div>
+                                <div class="expertise__text">
+                                    <strong>Marktanalyse</strong>
+                                    <span>Durchführung fundierter Marktanalysen und Potentialbewertungen</span>
+                                </div>
+                            </li>
+                            <li class="expertise__item">
+                                <div class="expertise__icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                </div>
+                                <div class="expertise__text">
+                                    <strong>Geschäftsmodelle</strong>
+                                    <span>Entwicklung tragfähiger Unternehmens- und Geschäftsmodelle</span>
+                                </div>
+                            </li>
+                            <li class="expertise__item">
+                                <div class="expertise__icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                </div>
+                                <div class="expertise__text">
+                                    <strong>Businesspläne</strong>
+                                    <span>Ausarbeitung sofort umsetzbarer Businesspläne</span>
+                                </div>
+                            </li>
+                            <li class="expertise__item">
+                                <div class="expertise__icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                </div>
+                                <div class="expertise__text">
+                                    <strong>Lokales Wissen</strong>
+                                    <span>Vermittlung lokaler Informationen (Gesetze, Standortfaktoren,
+                                        Rahmenbedingungen)</span>
+                                </div>
+                            </li>
+                            <li class="expertise__item">
+                                <div class="expertise__icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                </div>
+                                <div class="expertise__text">
+                                    <strong>Beziehungsbrücken</strong>
+                                    <span>Aufbau von Beziehungsbrücken zwischen Afrika und dem deutschsprachigen
+                                        Raum</span>
+                                </div>
+                            </li>
+                            <li class="expertise__item">
+                                <div class="expertise__icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                </div>
+                                <div class="expertise__text">
+                                    <strong>Kulturelle Kompetenz</strong>
+                                    <span>Vermittlung kultureller Besonderheiten (Kommunikationsstil, Geschäftsethik,
+                                        Werteverständnis)</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="expertise__visual">
+                        <div class="expertise__image-container">
+                            <img src="images/africa-network.png" alt="Business-Netzwerk in Afrika"
+                                class="expertise__image" loading="lazy">
                         </div>
-                        <div class="exp-item">
-                            <h4 data-t="exp_g3">Lokale Kompetenz</h4>
-                            <ul>
-                                <li data-t="exp_3_1">Gesetze & Standortfaktoren</li>
-                                <li data-t="exp_3_2">Beziehungsaufbau vor Ort</li>
-                                <li data-t="exp_3_3">Marktkenntnisse</li>
-                            </ul>
+                        <div class="expertise__stats-card">
+                            <h4>Regionale Expertise</h4>
+                            <div class="region-stats">
+                                <div class="region-stat">
+                                    <span class="region-stat__region">Westafrika</span>
+                                    <div class="region-stat__bar">
+                                        <div class="region-stat__fill" style="width: 95%;"></div>
+                                    </div>
+                                </div>
+                                <div class="region-stat">
+                                    <span class="region-stat__region">Zentralafrika</span>
+                                    <div class="region-stat__bar">
+                                        <div class="region-stat__fill" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                                <div class="region-stat">
+                                    <span class="region-stat__region">Ostafrika</span>
+                                    <div class="region-stat__bar">
+                                        <div class="region-stat__fill" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+                                <div class="region-stat">
+                                    <span class="region-stat__region">Südafrika</span>
+                                    <div class="region-stat__bar">
+                                        <div class="region-stat__fill" style="width: 70%;"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="exp-item">
-                            <h4 data-t="exp_g4">Kulturelle Brücken</h4>
-                            <ul>
-                                <li data-t="exp_4_1">Interkulturelle Kommunikation</li>
-                                <li data-t="exp_4_2">Geschäftsethik & Werte</li>
-                                <li data-t="exp_4_3">Beziehungsaufbau DACH-Afrika</li>
-                            </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <section class="references section" id="references">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label">Referenzen & Auftritte</span>
+                    <h2 class="section__title">Vertrauen durch Erfahrung</h2>
+                    <p class="section__description">Internationale Auftritte und erfolgreiche Beratungsprojekte</p>
+                </div>
+
+                <div class="references__grid">
+                    <div class="reference-card">
+                        <div class="reference-card__image">
+                            <img src="images/conference-speaker.png" alt="German-African Energy Forum" loading="lazy">
+                        </div>
+                        <div class="reference-card__content">
+                            <span class="reference-card__category">Konferenz</span>
+                            <h3 class="reference-card__title">African Energy Forum</h3>
+                            <p class="reference-card__location">Hamburg, Deutschland</p>
+                            <p class="reference-card__description">Als Redner beim 6th German-African Energy Forum
+                                präsentierte Alexander SIPUA innovative Ansätze für nachhaltige Energieprojekte in
+                                Afrika.</p>
+                        </div>
+                    </div>
+
+                    <div class="reference-card">
+                        <div class="reference-card__icon-container">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <div class="reference-card__content">
+                            <span class="reference-card__category">Beratung</span>
+                            <h3 class="reference-card__title">Internationale Kongresse</h3>
+                            <p class="reference-card__description">Regelmäßige Teilnahme und Moderation bei
+                                internationalen Fachveranstaltungen zu Wirtschaft, Energie und Entwicklung in Afrika.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="reference-card">
+                        <div class="reference-card__icon-container">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                            </svg>
+                        </div>
+                        <div class="reference-card__content">
+                            <span class="reference-card__category">Projekte</span>
+                            <h3 class="reference-card__title">Unternehmensberatung</h3>
+                            <p class="reference-card__description">Strategische Beratung von Unternehmen, Investoren und
+                                Institutionen bei Markteintritt und Projektentwicklung in Afrika.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="expertise__image">
-                    <!-- Bild "Business Strategy Africa" -->
-                    <img src="images/german afrika forum.png" alt="Business Strategy Africa / German Afrika Forum">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust / References Section -->
-    <section id="trust" class="trust">
-        <div class="container">
-            <div class="section-header-block trust__header">
-                <span class="section-label-big" data-t="trust_label">Referenzen</span>
-                <span class="section-subtitle-small" data-t="trust_title">Vertrauen durch Erfahrung</span>
-            </div>
-
-            <div class="trust__grid">
-                <div class="trust__card">
-                    <div class="trust__icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z">
-                            </path>
-                        </svg></div>
-                    <h3 class="trust__title" data-t="trust_1_t">African Energy Forum</h3>
-                    <p class="trust__desc" data-t="trust_1_d">Langjährige Präsenz und Expertise im Energiesektor.
-                        Vortrag beim African Energy Forum.</p>
-                </div>
-                <div class="trust__card">
-                    <div class="trust__icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
-                            </path>
-                        </svg></div>
-                    <h3 class="trust__title" data-t="trust_2_t">Internationale Auftritte</h3>
-                    <p class="trust__desc" data-t="trust_2_d">Präsenz auf internationalen Kongressen und
-                        Fachveranstaltungen als Redner und Experte.</p>
-                </div>
-                <div class="trust__card">
-                    <div class="trust__icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg></div>
-                    <h3 class="trust__title" data-t="trust_3_t">Beratungsprojekte</h3>
-                    <p class="trust__desc" data-t="trust_3_d">Erfolgreiche Unterstützung von Unternehmen und Investoren
-                        bei komplexen Projekten in West- und Zentralafrika.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header-block">
-                <span class="section-label-big" data-t="cont_label">Kontakt</span>
-                <span class="section-subtitle-small" data-t="cont_title">Sprechen wir über Ihr Afrika-Projekt.</span>
-            </div>
-
-            <div class="contact__grid">
-                <div class="contact__info">
-                    <h3>SIPUA CONSULTING</h3>
-                    <p>Heidenkampsweg 32<br>D-20097 Hamburg</p>
-                    <p>Tel: +49 (0) 40 - 32 03 04 88</p>
-                    <p>Mail: <a href="mailto:info@sipua-consulting.com">info@sipua-consulting.com</a></p>
-
-                    <div class="contact__image-below">
-                        <!-- Bild unter Mail -->
-                        <img src="images/sipua forum.png" alt="Sipua Forum">
+                <div class="references__testimonial">
+                    <div class="testimonial-slider" id="testimonial-slider">
+                        <div class="testimonial">
+                            <svg class="testimonial__quote-icon" width="48" height="48" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                            </svg>
+                            <p class="testimonial__text">Die Zusammenarbeit mit SIPUA CONSULTING hat unseren
+                                Afrika-Einstieg erheblich beschleunigt. Die lokalen Kenntnisse und Kontakte waren
+                                unbezahlbar.</p>
+                            <div class="testimonial__author">
+                                <span class="testimonial__name">Internationales Energieunternehmen</span>
+                                <span class="testimonial__position">Projektpartner</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="contact__form-area">
-                    <form id="contactForm" class="contact__form">
-                        <div class="form-group">
-                            <label class="form-label" data-t="form_name">Name</label>
-                            <input type="text" class="form-input" required>
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <div class="contact__background"></div>
+            <div class="container">
+                <div class="contact__grid">
+                    <div class="contact__content">
+                        <span class="section__label section__label--light" data-t="cont_label">Kontakt</span>
+                        <h2 class="contact__title" data-t="cont_title">Lassen Sie uns über Ihr Afrika-Projekt sprechen.
+                        </h2>
+                        <p class="contact__description" data-t="cont_desc">
+                            Haben Sie Fragen oder möchten Sie mehr über unsere Dienstleistungen erfahren? Wir freuen uns
+                            auf Ihre Nachricht.
+                        </p>
+
+                        <div class="contact__info">
+                            <div class="contact__info-item">
+                                <div class="contact__info-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                        <circle cx="12" cy="10" r="3" />
+                                    </svg>
+                                </div>
+                                <div class="contact__info-text">
+                                    <span class="contact__info-label">Adresse</span>
+                                    <span>Heidenkampsweg 32<br>D-20097 Hamburg<br>Deutschland</span>
+                                </div>
+                            </div>
+
+                            <div class="contact__info-item">
+                                <div class="contact__info-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                    </svg>
+                                </div>
+                                <div class="contact__info-text">
+                                    <span class="contact__info-label">Telefon</span>
+                                    <a href="tel:+494032030488">+49 (0) 40 - 32 03 04 88</a>
+                                </div>
+                            </div>
+
+                            <div class="contact__info-item">
+                                <div class="contact__info-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72" />
+                                    </svg>
+                                </div>
+                                <div class="contact__info-text">
+                                    <span class="contact__info-label">Mobil</span>
+                                    <a href="tel:+4917086435556">+49 (0) 170 - 864 35 56</a>
+                                </div>
+                            </div>
+
+                            <div class="contact__info-item">
+                                <div class="contact__info-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                        <polyline points="22,6 12,13 2,6" />
+                                    </svg>
+                                </div>
+                                <div class="contact__info-text">
+                                    <span class="contact__info-label">E-Mail</span>
+                                    <a href="mailto:info@sipua-consulting.com">info@sipua-consulting.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact__info-item">
+                                <div class="contact__info-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                        <line x1="3" y1="9" x2="21" y2="9" />
+                                        <line x1="9" y1="21" x2="9" y2="9" />
+                                    </svg>
+                                </div>
+                                <div class="contact__info-text">
+                                    <span class="contact__info-label">Fax</span>
+                                    <span>+49 (0) 40 - 32 03 04 90</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label class="form-label" data-t="form_mail">E-Mail</label>
-                            <input type="email" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" data-t="form_msg">Nachricht</label>
-                            <textarea class="form-textarea" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="form-submit btn btn-primary" data-t="form_send">Nachricht
-                            senden</button>
-                    </form>
+                    </div>
+
+                    <div class="contact__form-container">
+                        <form class="contact__form" id="contact-form">
+                            <div class="form__group">
+                                <label for="name" class="form__label">Name *</label>
+                                <input type="text" id="name" name="name" class="form__input" required
+                                    placeholder="Ihr vollständiger Name">
+                            </div>
+
+                            <div class="form__group">
+                                <label for="email" class="form__label">E-Mail *</label>
+                                <input type="email" id="email" name="email" class="form__input" required
+                                    placeholder="ihre@email.de">
+                            </div>
+
+                            <div class="form__group">
+                                <label for="company" class="form__label">Unternehmen</label>
+                                <input type="text" id="company" name="company" class="form__input"
+                                    placeholder="Ihr Unternehmen">
+                            </div>
+
+                            <div class="form__group">
+                                <label for="subject" class="form__label">Betreff *</label>
+                                <select id="subject" name="subject" class="form__input form__select" required>
+                                    <option value="">Bitte wählen...</option>
+                                    <option value="beratung">Beratungsanfrage</option>
+                                    <option value="markteintritt">Markteintritt Afrika</option>
+                                    <option value="energie">Erneuerbare Energien</option>
+                                    <option value="ppp">PPP-Projekte</option>
+                                    <option value="sonstiges">Sonstiges</option>
+                                </select>
+                            </div>
+
+                            <div class="form__group">
+                                <label for="message" class="form__label">Nachricht *</label>
+                                <textarea id="message" name="message" class="form__input form__textarea" required
+                                    placeholder="Beschreiben Sie Ihr Anliegen..."></textarea>
+                            </div>
+
+                            <div class="form__group form__checkbox-group">
+                                <input type="checkbox" id="privacy" name="privacy" class="form__checkbox" required>
+                                <label for="privacy" class="form__checkbox-label">
+                                    Ich habe die <a href="#privacy-policy" class="form__link">Datenschutzerklärung</a>
+                                    gelesen und stimme der Verarbeitung meiner Daten zu. *
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn--primary btn--full" id="submit-btn">
+                                <span>Nachricht senden</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13" />
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                                </svg>
+                            </button>
+
+                            <p class="form__note">* Pflichtfelder</p>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer__grid">
-            <div class="footer__left">
-                <h4 data-t="foot_nav">Navigation</h4>
-                <div class="footer__nav">
-                    <a href="#home" data-t="nav_home">Startseite</a>
-                    <a href="#services" data-t="nav_services">Leistungen</a>
-                    <a href="#expertise" data-t="nav_expertise">Expertise</a>
-                    <a href="#contact" data-t="nav_contact">Kontakt</a>
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="#home" class="footer__logo">
+                        <span class="logo-text">SIPUA</span>
+                        <span class="logo-accent">CONSULTING</span>
+                    </a>
+                    <p class="footer__tagline">Ihr Partner für erfolgreiche Geschäftsentwicklung in Afrika.</p>
+                </div>
+
+                <div class="footer__links">
+                    <h4 class="footer__heading">Navigation</h4>
+                    <ul class="footer__list">
+                        <li><a href="#home">Startseite</a></li>
+                        <li><a href="#about">Über uns</a></li>
+                        <li><a href="#services">Leistungen</a></li>
+                        <li><a href="#expertise">Expertise</a></li>
+                        <li><a href="#references">Referenzen</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__links">
+                    <h4 class="footer__heading">Leistungen</h4>
+                    <ul class="footer__list">
+                        <li><a href="#services">Business Development</a></li>
+                        <li><a href="#services">Vernetzung</a></li>
+                        <li><a href="#services">PPP-Projekte</a></li>
+                        <li><a href="#services">Markteintritt</a></li>
+                        <li><a href="#services">Erneuerbare Energien</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__contact">
+                    <h4 class="footer__heading">Kontakt</h4>
+                    <ul class="footer__list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <span>Heidenkampsweg 32, 20097 Hamburg</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72" />
+                            </svg>
+                            <a href="tel:+494032030488">+49 (0) 40 - 32 03 04 88</a>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                            <a href="mailto:info@sipua-consulting.com">info@sipua-consulting.com</a>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="2" y1="12" x2="22" y2="12" />
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            </svg>
+                            <a href="https://www.sipua-consulting.com" target="_blank">www.sipua-consulting.com</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="footer__right">
-                <h4 data-t="foot_legal">Rechtliches</h4>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 SIPUA CONSULTING. Alle Rechte vorbehalten.</p>
                 <div class="footer__legal">
                     <a href="impressum.html" data-t="foot_imp">Impressum</a>
                     <a href="datenschutz.html" data-t="foot_priv">Datenschutz</a>
                 </div>
-                <br>
-                <p style="color: rgba(255,255,255,0.4); font-size: 0.8rem; margin-top: 1rem;">© 2026 SIPUA CONSULTING
-                </p>
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Nach oben scrollen">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </button>
+
     <script src="script.js"></script>
 </body>
 
-
 </html>
-
